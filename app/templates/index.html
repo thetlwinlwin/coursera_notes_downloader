@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <h3>How to use?</h3>
+    <p>Go to the notes section in the course. scroll down to bottom and click "see more notes".</p>
+    <p>After that, right click on the page and select "view page source".</p>
+    <p>Select all the text and copy paste to source textarea.</p>
+    <p>Add your desired output file name. </p>
+    <form method="post" action="/get_form">
+        <label for="note_source">Source : </label><br>
+        <textarea name="note_source" id="source" cols="30" rows="10"
+            placeholder="Paste your page source here."></textarea><br>
+        <label for="output_name">output_name : </label><br>
+        <input name="output_name" id="output_name" type="text" placeholder="eg: my_file.txt"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
