@@ -18,7 +18,7 @@ def remove(input_text: str, to_remove=ADDED_NOTES_HEADER) -> str:
     return "".join(re.split(to_remove, input_text))
 
 
-def note_from_source(input_text: str) -> list[str]:
+def note_from_source(input_text: str):
     result_list = re.split(MY_REGEX, input_text)
 
     video_name = result_list[0]
