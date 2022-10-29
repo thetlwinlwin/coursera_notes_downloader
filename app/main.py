@@ -5,7 +5,7 @@ from fastapi.staticfiles import StaticFiles
 from starlette.responses import RedirectResponse, FileResponse
 from pathlib import Path,PurePath
 from typing import Optional
-from .extractor.scrape import get_notes
+from app.extractor.scrape import get_notes
 
 
 def clean_up(filename):
