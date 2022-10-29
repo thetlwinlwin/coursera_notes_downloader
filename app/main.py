@@ -3,7 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from starlette.responses import RedirectResponse, FileResponse
-from pathlib import Path,PurePath
+from pathlib import Path
 from typing import Optional
 from app.extractor.scrape import get_notes
 
