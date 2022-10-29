@@ -1,4 +1,3 @@
-from typing import IO, DefaultDict
 from bs4 import BeautifulSoup as bs
 import re
 from collections import defaultdict
@@ -14,7 +13,7 @@ ADDED_NOTES_HEADER: str = "Your Notes"
 MY_REGEX: str = "\d:\d\d"
 
 
-def remove(input_text: str, to_remove=ADDED_NOTES_HEADER) -> str:
+def remove(input_text: str, to_remove=ADDED_NOTES_HEADER):
     return "".join(re.split(to_remove, input_text))
 
 
@@ -46,14 +45,14 @@ def file_handler(filename, mode="r"):
         )
 
 
-def merge_dict(result: list[str]) -> DefaultDict[str, list]:
+def merge_dict(result):
     d = defaultdict(list)
     for k, v in result:
         d[k].append(v)
     return d
 
 
-def extract_notes(target_file: IO) -> list[str]:
+def extract_notes(target_file):
     result = []
     soup = bs(target_file, "html.parser")
     li = soup.find_all("li", {"class": LIST_CLASS})
@@ -69,7 +68,7 @@ def extract_notes(target_file: IO) -> list[str]:
     return result
 
 
-def write_output(output_file: IO, notes: DefaultDict[str, list]):
+def write_output(output_file, notes):
     for k, v in notes.items():
         output_file.write("Video - " + k + "\n\n")
         for index, val in enumerate(v, start=1):
@@ -77,15 +76,15 @@ def write_output(output_file: IO, notes: DefaultDict[str, list]):
         output_file.write("\n-------\n")
 
 
-def input_processing(input: str) -> DefaultDict[str, list]:
+def input_processing(input):
     notes = extract_notes(input)
     return merge_dict(notes)
 
 
 def output_processing(
-    notes: DefaultDict[str, list],
+    notes,
     output_name: str,
-) -> None:
+):
     output = file_handler(output_name, mode="w")
     write_output(output, notes)
     output.close()
@@ -95,5 +94,5 @@ def get_notes(
     ipnut_string: str,
     output_name: str = "result.txt",
 ):
-    notes: DefaultDict[str, list] = input_processing(input=ipnut_string)
+    notes = input_processing(input=ipnut_string)
     output_processing(notes, output_name)
