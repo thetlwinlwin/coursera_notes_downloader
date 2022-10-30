@@ -10,7 +10,12 @@
 
 <body>
     <h1>Your file is ready</h1>
+    {% if error %}
+    <p>Error: {{ error }}</p>
+    {% else %}
     <a href="{{ url_for('file',file_name = file_name) }}" target="_blank" Download>Download</a>
+    {% endif %}
+
 </body>
 
 </html>

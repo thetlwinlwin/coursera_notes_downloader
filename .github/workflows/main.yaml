@@ -1,0 +1,24 @@
+name: "coursera_downloader_test"
+on:
+  push:
+    branches:
+      - "master"
+      - "main"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pulling git repo
+        uses: actions/checkout@v2
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: update pip
+        run: python -m pip install --upgrade pip
+      - name: install all dependencies
+        run: pip install -r requirements.txt
+      - name: test with pytest
+        run: |
+          pip install pytest
+          pytest
