@@ -15,7 +15,7 @@ def test_index():
     assert response.status_code == 200
 
 
-def test_with_one_input_left():
+def test_without_an_input():
     payloads = [{"note_source": "random"}, {"output_name": "hi.txt"}]
     for payload in payloads:
         response = client.request("POST", "/get_form", data=payload)
@@ -30,7 +30,7 @@ def test_with_invalid_source():
     assert response.headers["content-type"] == "text/html; charset=utf-8"
 
 
-def test_with_vaild():
+def test_with_vaild_source():
     file = open(TEST_FOLDER_PATH.joinpath(TEST_INPUT_TEXT_NAME))
     payload = {
         "note_source": file.read(),

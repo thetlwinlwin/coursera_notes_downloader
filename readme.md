@@ -12,5 +12,6 @@
 
 
 ### **future plans**
+- add test and github worksflow. (done)
 - add the video link and duration.
 - separate the 'your thought' session.
