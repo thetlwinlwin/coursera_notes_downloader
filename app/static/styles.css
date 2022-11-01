@@ -1,3 +1,44 @@
-h1 {
-    color: red;
+body {
+    background-color: azure;
+}
+
+div.container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+div.input-group {
+    margin-bottom: 10px;
+}
+
+label[for=source] {
+    display: block;
+    background-color: antiquewhite;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 20%;
+}
+
+.output {
+    background-color: aqua;
+    padding: 5px;
+    width: 150px;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px grey;
+    margin-bottom: 10px;
+}
+
+input[type=submit] {
+    width: 150px;
+    margin: auto;
+    font-size: 1.5rem;
+    background-color: darkblue;
+    color: yellow;
+    text-shadow: 2px 2px 2px red, 0px 0px 4px grey;
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px grey;
+    cursor: pointer;
 }

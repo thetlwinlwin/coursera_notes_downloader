@@ -1,0 +1,18 @@
+div {
+    margin-top: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+a {
+    background-color: tomato;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}

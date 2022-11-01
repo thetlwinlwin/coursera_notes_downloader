@@ -1,0 +1,17 @@
+div {
+    margin-top: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+a {
+    background-color: darkcyan;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+}
