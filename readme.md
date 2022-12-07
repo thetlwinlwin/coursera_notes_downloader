@@ -1,6 +1,6 @@
 # Coursera Notes Downloader
 
-## [Simple notes downloader](https://coursera-notes-downloader.up.railway.app) for extracting your note texts.
+## [Simple notes downloader](https://coursera-notes-download.up.railway.app) for extracting your note texts.
 
 
 ### **Steps**
