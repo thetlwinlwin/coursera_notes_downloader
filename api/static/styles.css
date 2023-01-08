@@ -20,15 +20,20 @@ label[for=source] {
     border-radius: 20%;
 }
 
+
 .output {
     background-color: aqua;
     padding: 5px;
-    width: 150px;
+    width: 300px;
     margin: auto;
     border: 2px solid white;
     border-radius: 10px;
     box-shadow: 2px 2px 2px grey;
     margin-bottom: 10px;
+}
+
+#output_name {
+    width: 250px;
 }
 
 input[type=submit] {
