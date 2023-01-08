@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
-from app.index import app
 from pathlib import Path
+from api.index import app
 
 client = TestClient(app)
 TEST_FOLDER_PATH = Path.cwd().joinpath(__file__).parent
